@@ -264,7 +264,6 @@ you do have write permission to and re-run the tests.""")
         if '-v' in self.testOpts:
             verbosity = 2
         runner = unittest.TextTestRunner(verbosity=verbosity)
-        runner.run(unittest.TestSuite(Test.suites))
         results = runner.run(unittest.TestSuite(Test.suites))
         exit(int(not results.wasSuccessful()))
 
